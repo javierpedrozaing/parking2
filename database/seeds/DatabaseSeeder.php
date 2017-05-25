@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        DB::table('parking_state')->insert([
+        DB::table('parking_states')->insert([
         	['estado' => 'DISPONIBLE', 'created_at' => '2017-05-02 00:00:00', 'updated_at' => '2017-05-02 00:00:00'],
             ['estado' => 'OCUPADO', 'created_at' => '2017-05-02 00:00:00', 'updated_at' => '2017-05-02 00:00:00']                                            
         ]);

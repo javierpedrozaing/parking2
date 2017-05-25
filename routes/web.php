@@ -23,6 +23,7 @@ Route::post('/entrada', array('as' => 'entrada', 'uses' => 'HomeController@get_d
 // ]);
 
 Route::get('/vehiculos', 'VehiclesController@show')->name('show_vehicle');
+Route::get('/lugares', 'HomeController@list_parkings')->name('lugares');
 
 Route::post('/vehiculo/{placa}', 'VehiclesController@exit_vehicle')->name('exit_vehicle');
 

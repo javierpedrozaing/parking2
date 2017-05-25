@@ -19,6 +19,8 @@ class HomeController extends Controller
 		return view('administration', ['user' => $user] );
 	}
     function list_parkings(){
+    	$lugares = parking::all();
+    	return view("list_parkings", ["lugares" => $lugares]);
     	 
     }
 }

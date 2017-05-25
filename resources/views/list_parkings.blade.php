@@ -1,19 +1,23 @@
  <div class="panel panel-primary col-xs-12 col-sm-4 col-md-4" style="padding:20px;">             
-                <div >
-                    <label  for="exampleInputEmail3">Fecha Entrada:</label><br>
-                    <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input"><br>
-                    <label  for="exampleInputEmail3">Hora Entrada:</label><br>
-                    <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">    <br>        
-                    <label  for="exampleInputEmail3">Hora Salida:</label><br>
-                    <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input"><br>
-                </div>
 
-                <div>
-                    <label  for="exampleInputEmail3">Tipo de Vehículo:</label><br>
-                    <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input"><br>
-                    <label  for="exampleInputEmail3">Placa:</label><br>
-                    <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input"><br>
-                    <label  for="exampleInputEmail3">Tipo tarifa:</label><br>
-                    <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
-                </div>
+    <table>
+    <tr>
+        <th>Tipo Lugar</th>
+        <th>Nombre Ubicación</th>
+        <th>EStado</th>
+        <th>Descripción ubicación</th>
+    </tr>
+    @forelse($lugares as $lugar)                        
+        <tr>
+            
+            <td>{{ $lugar->tipo_lugar }}</td>
+            <td>{{ $lugar->nombre_ubicacion }}</td>                                
+            <td>{{ $lugar->estado->estado }}</td>
+            <td>{{ $lugar->descripcion_ubicacion }}</td>
+        </tr>
+
+        @empty
+            <p>NO HAY LUGARES DISPONIBLES</p>
+        @endforelse
+    </table>
 </div>

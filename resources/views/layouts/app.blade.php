@@ -58,9 +58,9 @@
                             <li><a href="{{ route('login') }}">Entrar</a></li>
                             <li><a href="{{ route('register') }}">Registrarse</a></li>
                         @else
-                        <li class="active"><a href="">Inicio</a></li>
+                        <li class="active"><a href="{{ route('home')}}">Inicio</a></li>
                         <li><a href="{{ route('show_vehicle')}}">Listado de Vehiculos</a></li>  
-                        <li><a href="">Listado de Lugares</a></li>  
+                        <li><a href="{{ route('lugares') }}">Listado de Lugares</a></li>  
                         <li role="presentation" class="dropdown">
                           <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                             Reportes <span class="caret"></span>

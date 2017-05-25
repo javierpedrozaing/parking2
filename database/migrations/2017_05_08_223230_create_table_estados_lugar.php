@@ -13,7 +13,7 @@ class CreateTableEstadosLugar extends Migration
      */
     public function up()
     {
-        Schema::create('parking_state', function (Blueprint $table) {
+        Schema::create('parking_states', function (Blueprint $table) {
             $table->increments('id');
             $table->string('estado');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateTableEstadosLugar extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parking_state');
+        Schema::dropIfExists('parking_states');
     }
 }
